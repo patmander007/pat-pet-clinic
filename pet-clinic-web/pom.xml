@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>com.patmander</groupId>
 		<artifactId>pat-pet-clinic</artifactId>
-		<version>0.0.3-SNAPSHOT</version>
+		<version>0.0.4</version>
 	</parent>
 	<artifactId>pet-clinic-web</artifactId>
 
@@ -12,7 +12,7 @@
 		<dependency>
 			<groupId>com.patmander</groupId>
 			<artifactId>pet-clinic-data</artifactId>
-			<version>0.0.3-SNAPSHOT</version>
+			<version>0.0.4</version>
 		</dependency>
 
 		<dependency>
