@@ -1,6 +1,6 @@
 package com.patmander.patpetclinic.model;
 
-public class Person {
+public abstract class Person extends BaseEntity {
 
   private String firstName;
   private String lastName;
