@@ -2,14 +2,13 @@ package com.patmander.patpetclinic.data.boostrap;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import com.patmander.patpetclinic.model.Owner;
 import com.patmander.patpetclinic.model.Vet;
 import com.patmander.patpetclinic.services.OwnerService;
 import com.patmander.patpetclinic.services.VetService;
-import com.patmander.patpetclinic.services.map.OwnerServiceMap;
-import com.patmander.patpetclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner{
@@ -19,12 +18,12 @@ public class DataLoader implements CommandLineRunner{
   
   private static final Logger logger = LoggerFactory.getLogger(DataLoader.class);
   
-  public DataLoader() {
-    ownerService = new OwnerServiceMap();
-    vetService = new VetServiceMap();
+  @Autowired
+  public DataLoader(OwnerService ownerService, VetService vetService) {
+    this.ownerService = ownerService;
+    this.vetService = vetService;
   }
-  
-  
+
   @Override
   public void run(String... args) throws Exception {
     
