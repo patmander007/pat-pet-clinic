@@ -1,8 +1,9 @@
 package com.patmander.patpetclinic.services.map;
 
 import com.patmander.patpetclinic.model.Pet;
+import com.patmander.patpetclinic.services.PetService;
 
-public class PetMapService extends AbstractMapService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService{
 
   @Override
   public Pet save(Pet object) {
