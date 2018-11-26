@@ -1,5 +1,5 @@
 package com.patmander.patpetclinic.model;
 
-public class Vet extends Owner {
+public class Vet extends Person {
 
 }
